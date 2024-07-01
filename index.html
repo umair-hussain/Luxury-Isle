@@ -38,7 +38,7 @@
       }
 
       .carousel-caption {
-        top: 30%;
+        top: 35%;
       }
 
       .carousel-caption span {
@@ -85,8 +85,18 @@
 
       .carousel-item img {
         filter: brightness(0.45);
-        height: 100vh;
+        height: 600px;
+        object-fit: cover;
       }
+
+      .carousel-indicators [data-bs-target] {
+        width: 25px;
+        height: 6px;
+      }
+
+      /* Custom CSS for carousel controls end */
+
+      /* featured product section start */
 
       .img-feature {
         position: relative;
@@ -95,6 +105,8 @@
 
       .img-feature img {
         width: 100%;
+        height: 400px;
+        object-fit: cover;
         filter: brightness(0.45);
       }
 
@@ -121,10 +133,6 @@
         font-weight: 400;
       }
 
-      .carousel-indicators [data-bs-target] {
-        width: 25px;
-        height: 6px;
-      }
 
       .featured-product-heading h6 {
         font-size: 16px;
@@ -138,21 +146,36 @@
         color: var(--text-black);
         font-weight: 700;
       }
+ /* featured product section end */
+      
 
       /* product card design */
+      .contact-card span {
+        color: black !important;
+      }
+
+      .contact-card i {
+        color: black !important;
+      }
+
+      .contact-card a {
+        text-decoration: none !important;
+      }
       .product-grid {
         text-align: center;
-        padding: 0 0 72px;
+        padding: 0 0 103px;
         border: 1px solid rgba(0, 0, 0, 0.1);
         overflow: hidden;
         position: relative;
         z-index: 1;
-        margin-bottom: 30px;
+        /* margin-bottom: 30px; */
       }
 
       .product-grid .product-image {
         position: relative;
         transition: all 0.3s ease 0s;
+        height: 300px;
+        object-fit: cover;
       }
 
       .product-grid .product-image a {
@@ -309,9 +332,11 @@
         display: none;
       }
 
+
       .featured-card-section-title {
         padding-top: 8px;
         padding-bottom: 32px;
+        margin-top: 24px;
       }
       .featured-card-section-title h2 {
         color: var(--background-green);
@@ -328,6 +353,9 @@
         font-weight: 700;
       }
 
+       /* product card design  end*/
+
+        /* shipment  start*/
       .shipment-section h2 {
         font-size: 18px;
         padding-top: 15px;
@@ -341,52 +369,358 @@
       }
 
       .bg-shipment {
-        background:#F9F9F9;
-        padding-top:25px;
-        
+        background: #f9f9f9;
+        padding-top: 25px;
       }
 
-      .shipment-section .col-md-3{
-        width: 23% !important; 
+      .shipment-section .col-md-3 {
+        width: 23% !important;
       }
+      /* shipment  end*/
 
 
-
-      .footer-section{
-        background:#111111;
+      /*footer  start*/
+      .footer-section {
+        background: #111111;
         padding-top: 50px;
         padding-bottom: 50px;
       }
 
-      .footer-section h2{
+      .footer-section h2 {
         font-size: 20px;
         color: var(--text-white);
         font-weight: 700;
         padding-bottom: 25px;
       }
-      .footer-section a{
+      .footer-section a {
         font-size: 16px;
         font-weight: 300;
         color: var(--text-white);
         text-decoration: none;
       }
-      .links{
+      .links {
         padding-bottom: 15px;
       }
 
-      .contact i{
+      .contact i {
         color: var(--text-white);
       }
 
-      .contact span{
+      .contact span {
         color: var(--text-white);
       }
 
+      .border-footer-icon {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 32px;
+        height: 32px;
+        border: 2px solid #d6d6d6;
+        border-radius: 50%;
+        color: #d6d6d6;
+        font-size: 14px;
+        margin-right: 10px;
+      }
+
+      .bottom-footer {
+        background: black;
+        padding-top: 16px;
+        padding-bottom: 16px;
+      }
+
+      .bottom-footer h6 {
+        padding: 0px;
+        margin: 0px;
+        color: #d6d6d6;
+      }
+
+      /*footer  end*/
+
+      /* header start */
+      body {
+        overflow-x: hidden;
+      }
+      header.sticky-header {
+        background-color: transparent;
+        border-bottom: 1px solid #e7e7e7;
+        position: -webkit-sticky; /* For Safari */
+        position: sticky;
+        top: 0;
+        z-index: 1020; /* Adjust z-index to ensure it stays on top */
+        /* background-color: white; */
+        transition: background-color 0.3s ease; /* Smooth transition for background color change */
+      }
+
+      .sticky-header.scrolled {
+        background-color: white; /* Red background color on scroll */
+      }
+
+      .bi-person-circle.scrolled {
+        color: #333333 !important;
+      }
+
+      a.nav-link.scrolled {
+        color: #333333 !important;
+      }
+      a.nav-link:hover {
+        color: white;
+      }
+      header.sticky-header.scrolled {
+        border-bottom: 1px solid #ced4da !important ;
+      }
+
+      .top-section {
+        background-color: transparent;
+        padding: 10px 0;
+        border-bottom: 1px solid #e7e7e7;
+      }
+      .top-section.scrolled {
+        border-bottom: 1px solid #ced4da !important;
+      }
+      .top-section .contact-info {
+        font-size: 14px;
+      }
+
+      .top-section .social-media a {
+        color: #333;
+        margin-left: 10px;
+      }
+
+      .top-section .social-media a:hover {
+        color: white;
+      }
+
+      .main-navbar {
+        padding: 10px 0;
+      }
+
+      .navbar-toggler {
+        border: none;
+      }
+
+      .navbar-toggler:focus,
+      .navbar-toggler:active {
+        outline: none;
+        box-shadow: none;
+      }
+
+      .navbar-toggler-icon {
+        color: white;
+      }
+
+      .form-control {
+        width: 200px;
+      }
+
+      #searchIcon {
+        border-left: 0px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+      }
+      .hero-video {
+        margin-top: -120px;
+      }
+      .bg-search-icon {
+        background: var(--background-green);
+      }
+      i.bi.bi-search {
+        color: white;
+      }
+      input.form-control {
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+      }
+      a.nav-link {
+        color: white;
+      }
+      .bi.bi-person-circle {
+        color: white;
+      }
+      .btn.btn-custom-header {
+        background: white;
+        border-radius: 50px;
+        margin-left: 20px;
+        border: 1px solid #ced4da;
+      }
+      .form-control {
+        border-radius: 50px;
+      }
+      .nav-link.active {
+        color: white !important;
+      }
+
+      #countrySelect {
+        border-radius: 50px;
+      }
+
+      .bi-caret-down-fill::before {
+        content: unset !important;
+      }
+      .custom-select-wrapper {
+        position: relative;
+        width: fit-content;
+        display: flex;
+        align-items: center;
+      }
+
+      .custom-select-icon {
+        position: absolute;
+        left: 10px;
+        pointer-events: none;
+        color: #1a3318;
+        font-size: 1.2em;
+      }
+
+      .custom-select {
+        padding-left: 2.5rem; 
+        padding-right: 2rem;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+      }
+
+      .custom-select-arrow {
+        position: absolute;
+        right: 10px;
+        pointer-events: none;
+        color: #1a3318;
+        font-size: 1em;
+      }
+
+       /* header end */
+
+
+      /* Custom section image */
+      .custom-section-img {
+        text-decoration: none;
+        bottom: 20%;
+        position: absolute;
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .read-more-btn a{
+         background: white;
+         padding: 12px 18px;
+         border-radius: 50px;
+      }
+
+      .read-more-btn a span{
+        color: var(--text-black);
+      }
+
+      .read-more-btn a i{
+        color: var(--text-black);
+      }
+
+    
+      /* Custom section image End */
     </style>
 
     <title>Luxury ISLE</title>
   </head>
   <body>
+    <!-- Combined Header Start -->
+    <header class="sticky-header" id="header">
+      <div class="top-section">
+        <div class="container-fluid custom-px">
+          <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-md-3 countries">
+              <div class="form-group">
+                <div class="custom-select-wrapper">
+                  <div class="custom-select-icon">
+                    <i class="bi bi-geo-alt"></i>
+                  </div>
+                  <select class="form-select custom-select" id="countrySelect">
+                    <option value="UK">UK</option>
+                    <option value="AL">Albania</option>
+                    <!-- Add more options as per your list -->
+                  </select>
+                  <div class="custom-select-arrow">
+                    <i class="bi bi-caret-down-fill"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 ps-5">
+              <div class="input-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Search..."
+                  aria-label="Search"
+                  aria-describedby="searchIcon"
+                />
+                <button
+                  class="btn bg-search-icon"
+                  type="button"
+                  id="searchIcon"
+                >
+                  <i class="bi bi-search"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-md-3 social-media ps-2" style="text-align: right">
+              <i class="bi bi-person-circle"></i>
+              <button class="btn btn-custom-header">
+                <i class="bi bi-plus"></i>BUY
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="main-header navbar navbar-expand-lg sticky-header w-100">
+        <div class="container-fluid custom-px">
+          <a class="navbar-brand" href="index.html">
+            <img src="images/logo.png" alt="Logo" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fa-solid fa-bars-staggered" style="color: white"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">HOME</a>
+              </li>
+              <li class="nav-item ps-2">
+                <a class="nav-link" href="#about">ABOUT</a>
+              </li>
+              <li class="nav-item ps-2">
+                <a class="nav-link" href="#gallery">GALLERY</a>
+              </li>
+              <li class="nav-item ps-2">
+                <a class="nav-link" href="#team">TEAM</a>
+              </li>
+              <li class="nav-item ps-2">
+                <a class="nav-link" href="#faq">FAQ</a>
+              </li>
+              <li class="nav-item-subscribe ps-2">
+                <a class="nav-link" href="subscribe.html">SUBSCRIBE</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- Combined Header End -->
+
     <!--Section Hero Start-->
     <div class="hero-video">
       <div
@@ -420,46 +754,46 @@
           <div class="carousel-item active">
             <img src="images/hero-1.png" class="d-block w-100" alt="..." />
             <div class="carousel-caption d-none d-md-block">
-              <span>Women Fashion</span>
+              <span>Luxury Items</span>
               <h1>New Collection</h1>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam<br />
                 vitae posuere est Sed placerat ligula
               </p>
-              <div>
+              <!-- <div>
                 <a href="#">Shop Now</a>
                 <a href="#" class="ms-4">Collection</a>
-              </div>
+              </div> -->
             </div>
           </div>
           <div class="carousel-item">
             <img src="images/hero-1.png" class="d-block w-100" alt="..." />
             <div class="carousel-caption d-none d-md-block">
-              <span>Women Fashion</span>
+              <span>Luxury Items</span>
               <h1>New Collection</h1>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam<br />
                 vitae posuere est Sed placerat ligula
               </p>
-              <div>
+              <!-- <div>
                 <a href="#">Shop Now</a>
                 <a href="#" class="ms-4">Collection</a>
-              </div>
+              </div> -->
             </div>
           </div>
           <div class="carousel-item">
             <img src="images/hero-1.png" class="d-block w-100" alt="..." />
             <div class="carousel-caption d-none d-md-block">
-              <span>Women Fashion</span>
+              <span>Luxury Items</span>
               <h1>New Collection</h1>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam<br />
                 vitae posuere est Sed placerat ligula
               </p>
-              <div>
+              <!-- <div>
                 <a href="#">Shop Now</a>
                 <a href="#" class="ms-4">Collection</a>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -489,31 +823,46 @@
     <div class="container-fluid custom-px custom-mt">
       <div class="row">
         <div class="col-md-4 featur-1">
-          <div class="img-feature">
-            <img src="images/bag.png" alt="Bag" />
-            <div class="text-center text-feature">
-              <h2>bags</h2>
-              <h6>Best Selling Deals</h6>
+          <a href="#">
+            <div class="img-feature">
+              <img src="images/bag.png" alt="Bag" />
+              <div class="text-center text-feature d-flex flex-column align-items-center">
+                <h2>bags</h2>
+                <div class="d-flex align-items-center">
+                  <h6>453,946 LISTINGS</h6>
+                  <i class="bi bi-arrow-right ps-2"></i>
+                </div>
+              </div>
             </div>
-          </div>
+          </a>
         </div>
         <div class="col-md-4 featur-1">
-          <div class="img-feature">
-            <img src="images/jewellery.png" alt="Bag" />
-            <div class="text-center text-feature">
-              <h2>jewellery</h2>
-              <h6>Hot Trends</h6>
+          <a href="#">
+            <div class="img-feature">
+              <img src="images/jewellery.png" alt="Bag" />
+              <div class="text-center text-feature d-flex flex-column align-items-center">
+                <h2>jewellery</h2>
+                <div class="d-flex align-items-center">
+                  <h6>31,432 LISITINGS</h6>
+                  <i class="bi bi-arrow-right ps-2"></i>
+                </div>
+              </div>
             </div>
-          </div>
+          </a>
         </div>
         <div class="col-md-4 featur-1">
-          <div class="img-feature">
-            <img src="images/shoes.png" alt="shoes" />
-            <div class="text-center text-feature">
-              <h2>Shoes</h2>
-              <h6>New Collection</h6>
+          <a href="#">
+            <div class="img-feature">
+              <img src="images/shoes.png" alt="shoes" />
+              <div class="text-center text-feature d-flex flex-column align-items-center">
+                <h2>Shoes</h2>
+                <div class="d-flex align-items-center">
+                  <h6>800,232 LISTINGS</h6>
+                  <i class="bi bi-arrow-right ps-2"></i>
+                </div>
+              </div>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </div>
@@ -527,7 +876,7 @@
         <img src="images/heading-img.png" alt="heading-img" />
       </div>
       <!--Bags-->
-      <div class="row pt-5">
+      <div class="row">
         <div
           class="d-flex justify-content-between align-items-center featured-card-section-title"
         >
@@ -568,6 +917,11 @@
               <div class="price">
                 $16.00
                 <span>$20.00</span>
+              </div>
+              <div class="contact-card">
+                <a href="#">
+                  <span>Contact Us <i class="bi bi-envelope ps-2"></i></span>
+                </a>
               </div>
             </div>
           </div>
@@ -1017,6 +1371,30 @@
     </div>
     <!--Featured Product Section End-->
 
+    <!--Read More-->
+    
+    <div class="container-fluid custom-px custom-mt">
+      <div class="row">
+        <div class="col-md-12">
+            <div class="img-feature">
+              <img src="images/hero-1.png" alt="Bag" />
+              <div class="custom-section-img">
+                <h2>Sell Luxury Items on Luxury Isle</h2>
+                  <p>Promote and sell premium luxury items exclusively on Luxury Isle, a platform dedicated to high-end, sophisticated products.</p>
+                <div class="d-flex align-items-center justify-content-end read-more-btn">
+                  <a href="#" style="text-decoration: none; color: white;">
+                  <span>Start Now</span>
+                  <i class="bi bi-arrow-right ps-2"></i>
+                </a>
+                </div>
+              </div>
+            </div>
+        
+        </div>
+      </div>
+    </div>
+    <!--Read More End-->
+
     <!--Logo Section Start-->
     <div class="container-fluid custom-px custom-mt logo-section-outer py-5">
       <div class="row">
@@ -1042,104 +1420,152 @@
     </div>
     <!--Logo Section End-->
 
-<!--Shipment Section Start-->
-<div class="container-fluid custom-px custom-mt  shipment-section">
-    <div class="row text-center d-flex justify-content-around">
-      <div class="col-md-3 bg-shipment">
-        <img src="images/truck.png" alt="logo-1" width="28px" />
-        <h2>Free Shipping</h2>
-        <p>Best Shipping Service</p>
-      </div>
-      <div class="col-md-3 bg-shipment">
-        <img src="images/cashon-delivery.png" alt="logo-2" width="28px" />
-        <h2>Cash on Delivery</h2>
-        <p>Fast Delivery Method</p>
-      </div>
-      <div class="col-md-3 bg-shipment">
-        <img src="images/support.png" alt="logo-3" width="28px" />
-        <h2>24/7 Support</h2>
-        <p>24 Hours a day</p>
-      </div>
-      <div class="col-md-3 bg-shipment">
-        <img src="images/return.png" alt="logo-4" width="28px" />
-        <h2>30 Days Return</h2>
-        <p>Simple Return 30 Days</p>
-      </div>
-    </div>
-  </div>
-  <!--Shipment Section End-->
+    <!--Shipment Section Start-->
 
+    <!-- <div class="container-fluid custom-px custom-mt shipment-section">
+      <div class="row text-center d-flex justify-content-around">
+        <div class="col-md-3 bg-shipment">
+          <img src="images/truck.png" alt="logo-1" width="28px" />
+          <h2>Free Shipping</h2>
+          <p>Best Shipping Service</p>
+        </div>
+        <div class="col-md-3 bg-shipment">
+          <img src="images/cashon-delivery.png" alt="logo-2" width="28px" />
+          <h2>Cash on Delivery</h2>
+          <p>Fast Delivery Method</p>
+        </div>
+        <div class="col-md-3 bg-shipment">
+          <img src="images/support.png" alt="logo-3" width="28px" />
+          <h2>24/7 Support</h2>
+          <p>24 Hours a day</p>
+        </div>
+        <div class="col-md-3 bg-shipment">
+          <img src="images/return.png" alt="logo-4" width="28px" />
+          <h2>30 Days Return</h2>
+          <p>Simple Return 30 Days</p>
+        </div>
+      </div>
+    </div>  
+  -->
 
-  <div class="container-fluid custom-px custom-mt footer-section">
-    <div class="row d-flex justify-content-between">
+    <!--Shipment Section End-->
+
+    <!--Footer Section-->
+    <div class="container-fluid custom-px custom-mt footer-section">
+      <div class="row d-flex justify-content-between">
         <div class="col-md-3">
-            <h2>Popular Categories</h2>
-            <div class="links">
-              <a href="#">Bags</a>
-            </div>
-            <div class="links">
-              <a  href="#">Jewellery</a>
-            </div>
-            <div class="links">
-              <a href="#">Shoes</a>
-            </div>
-            <div class="links">
-              <a href="#">Clothes</a>
-            </div>
-           
-        </div> <!-- Missing closing div added here -->
+          <h2>Popular Categories</h2>
+          <div class="links">
+            <a href="#">Bags</a>
+          </div>
+          <div class="links">
+            <a href="#">Jewellery</a>
+          </div>
+          <div class="links">
+            <a href="#">Shoes</a>
+          </div>
+          <div class="links">
+            <a href="#">Clothes</a>
+          </div>
+        </div>
+        <!-- Missing closing div added here -->
         <div class="col-md-3">
-            <h2>Trending Searches</h2>
-            <div class="links">
-              <a href="">Rings</a>
-            </div>
-           <div class="links">
+          <h2>Trending Searches</h2>
+          <div class="links">
+            <a href="">Rings</a>
+          </div>
+          <div class="links">
             <a href="">Jackets</a>
-           </div>
-            <div class="links">
-              <a href="">Shirts</a>
-            </div>
-            <div class="links">
-              <a href="">Jeans</a>
-            </div>
+          </div>
+          <div class="links">
+            <a href="">Shirts</a>
+          </div>
+          <div class="links">
+            <a href="">Jeans</a>
+          </div>
         </div>
         <div class="col-md-3">
-            <h2>Quick Links</h2>
-            <div class="links">
-              <a href="">Home</a>
-            </div>
-            <div class="links">
-              <a href="">Shop</a>
-            </div>
-            <div class="links">
-              <a href="">Terms of Use</a>
-            </div>
-            <div class="links">
-              <a href="">Privacy Policy</a>
-            </div>
-           
+          <h2>Quick Links</h2>
+          <div class="links">
+            <a href="">Home</a>
+          </div>
+          <div class="links">
+            <a href="">Shop</a>
+          </div>
+          <div class="links">
+            <a href="">Terms of Use</a>
+          </div>
+          <div class="links">
+            <a href="">Privacy Policy</a>
+          </div>
         </div>
         <div class="col-md-3">
-            <h2>Contacts</h2>
-            <div class="links contact d-flex">
-              <div><i class="bi bi-geo-alt"></i></div>
-              <div class="ps-2"><span>4060 Reppert Coal Road Jackson,<br>MS 39201 USA</span></div>
+          <h2>Contacts</h2>
+          <div class="links contact d-flex">
+            <div><i class="bi bi-geo-alt"></i></div>
+            <div class="ps-2">
+              <span>4060 Reppert Coal Road Jackson,<br />MS 39201 USA</span>
             </div>
-            <div class="links contact d-flex">
-              <div><i class="bi bi-phone"></i></div>
-              <div class="ps-2"><span>(+123) 685 78</span></div>
-            </div>
-            <div class="links contact d-flex">
-              <div><i class="bi bi-envelope"></i></div>
-              <div class="ps-2"><span>support@yoursite.com</span></div>
-            </div>
+          </div>
+          <div class="links contact d-flex">
+            <div><i class="bi bi-phone"></i></div>
+            <div class="ps-2"><span>(+123) 685 78</span></div>
+          </div>
+          <div class="links contact d-flex">
+            <div><i class="bi bi-envelope"></i></div>
+            <div class="ps-2"><span>support@yoursite.com</span></div>
+          </div>
         </div>
+      </div>
     </div>
-    
-</div>
+    <div class="container-fluid custom-px bottom-footer">
+      <div class="row d-flex align-items-center">
+        <div class="col-md-4">
+          <a href="#"><i class="bi bi-facebook border-footer-icon"></i></a>
 
-  
+          <a href="#"><i class="bi bi-instagram border-footer-icon"></i></a>
+          <a href="#"><i class="bi bi-twitter-x border-footer-icon"></i></a>
+        </div>
+        <div class="col-md-4">
+          <h6>Copyright © 2024 Luxury | Isle, All rights Reserved.</h6>
+        </div>
+        <div class="col-md-4 text-end">
+          <img src="images/card.png" alt="card" />
+        </div>
+      </div>
+    </div>
+    <!--Footer Section End-->
+
     <!-- Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script> -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script>
+      // JavaScript for sticky header background color change on scroll
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 50) {
+          $("#header").addClass("scrolled");
+          $(".bi-person-circle").addClass("scrolled");
+          $(" a.nav-link").addClass("scrolled");
+          $(".top-section").addClass("scrolled");
+          $("header.sticky-header").addClass("scrolled");
+        } else {
+          $("#header").removeClass("scrolled");
+          $(".bi-person-circle").removeClass("scrolled");
+          $(" a.nav-link").removeClass("scrolled");
+          $(".top-section").removeClass("scrolled");
+          $("header.sticky-header").removeClass("scrolled");
+        }
+      });
+    </script>
   </body>
 </html>
