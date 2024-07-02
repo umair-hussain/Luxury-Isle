@@ -856,4 +856,9 @@ i.bi.bi-person-circle {
   .menu-mobile{
     display: none;
   }
+
+  .navbar-expand-lg .navbar-nav .nav-link{
+    padding-left: 0px !Important;
+    padding-right: 15px;
+  }
 }
